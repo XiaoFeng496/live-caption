@@ -1,0 +1,12 @@
+# 热词 / Hotwords
+# 复制为 hotwords.txt 后生效。每行一个或逗号分隔，# 后是注释；改完重启程序。
+# Copy to hotwords.txt. One per line or comma-separated; "#" starts a comment; restart to apply.
+# 把你常看内容里的专有名词放进来：人名、队名、产品名、行业术语，识别准确率提升最明显。
+
+# 例：电竞 / e-sports
+LPL, LCK, MSI, 世界赛, 峡谷先锋, 纳什男爵, 打野, 中单, 上单, 辅助, ADC
+
+# 例：技术 / tech
+Kubernetes, PyTorch, CUDA, llama.cpp, Transformer, 显存, 量化, 微调
+
+# 例：会议常见名字 / names
