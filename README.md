@@ -45,6 +45,7 @@
 1. 下载本仓库，双击 `setup.bat`：创建虚拟环境、装依赖、下载模型（约 2.8GB，国内可先 `set HF_ENDPOINT=https://hf-mirror.com`）。
    检测到 `uv` 时优先走 `uv venv` + `uv pip install`（秒级完成），没有 `uv` 则自动回退 `python -m venv` + `pip`。注意 uv 建的 venv 默认**不含 pip**，以后装包用 `uv pip install <pkg>`（想装回 pip 约 6MB：`uv pip install pip`；`uv venv --seed` 在 0.13.6 上实测无效）。
 2. 下载 [llama.cpp 的 Windows CUDA 构建](https://github.com/ggml-org/llama.cpp/releases)（`llama-bXXXX-bin-win-cuda-13.x-x64.zip` 和同名 `cudart-...zip`），两个都解压到本仓库的 `llama\` 目录里，使 `llama\llama-server.exe` 存在。
+   **机器上已经有 llama.cpp、且 `llama-server` 在 PATH 里的话可以跳过这步**：启动脚本在 `llama\` 不存在时会自动从 PATH 里取（也可以直接 `set LLAMA_SERVER=完整路径` 或用 `--llama-server` 指定），省下这 1GB。
    **必须是 2026-04-12 之后的版本**（Qwen3-ASR 支持在 [PR #19441](https://github.com/ggml-org/llama.cpp/pull/19441) 合并），b10941 实测可用。
 3. 双击 `start-zh.bat`（中文）或 `start.bat`（自动检测语言）。字幕条出现在屏幕底部，终端同时打印，`transcript.txt` 追加保存。
 

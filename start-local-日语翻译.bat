@@ -6,6 +6,8 @@ if not exist .venv\Scripts\python.exe (
   pause
   exit /b 1
 )
+REM llama.cpp: use the build on PATH when llama\ is not bundled.
+if not exist "llama\llama-server.exe" if not defined LLAMA_SERVER for %%I in (llama-server.exe) do set "LLAMA_SERVER=%%~$PATH:I"
 rem Pure-Japanese stream (JP game / JP talk / JP stream). One translation model only.
 rem Kept pure ASCII: cmd.exe reads .bat with the OEM codepage, so UTF-8 CJK in comments can
 rem break line parsing and print "'x' is not recognized as an internal or external command".

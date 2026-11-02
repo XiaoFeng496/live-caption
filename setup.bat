@@ -47,7 +47,7 @@ if errorlevel 1 (
 
 echo [3/3] llama.cpp: put a recent Windows CUDA build (b10900+ / after 2026-04-12) into the llama\ folder next to this script.
 echo       https://github.com/ggml-org/llama.cpp/releases  ^(llama-bXXXX-bin-win-cuda-13.x-x64.zip + cudart-llama-bin-win-cuda-13.x-x64.zip^)
-if not exist llama\llama-server.exe echo       llama\llama-server.exe NOT found yet.
+if not exist llama\llama-server.exe echo       llama\llama-server.exe not in llama\ - will use llama-server from PATH if present.
 if not exist hotwords.txt copy hotwords.example.txt hotwords.txt >nul
 echo Done. Run start-zh.bat (Chinese) or start.bat (auto language).
 echo Note: if uv created this venv it intentionally has no pip inside, so "python -m pip" will NOT
