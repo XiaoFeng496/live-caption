@@ -7,3 +7,14 @@ transcript*.txt
 *.srt
 hotwords.txt
 debug*/
+# 临时调试目录：测试音频、跑出来的 json/log、临时脚本，不进仓库
+# （里面有 setup.bat 试跑残留的 Windows 保留名文件 nul）
+_tmp/
+
+# 分析/基准脚本统一放 test/，别再散落到根目录
+/bench_*.py
+/test_*.py
+
+# pip freeze 的本地环境快照（全量传递依赖 + 平台相关包，随本机变），
+# 直接依赖请看 requirements.txt
+requirements.freeze.txt

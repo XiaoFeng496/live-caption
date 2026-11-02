@@ -2,3 +2,4 @@ numpy
 pyaudiowpatch
 soxr
 faster-whisper      # 只用它自带的 Silero VAD / only for its bundled Silero VAD
+pillow              # 字幕文字图像渲染（Pillow 灰度 AA + 描边，避免 ClearType 彩色伪描边）
